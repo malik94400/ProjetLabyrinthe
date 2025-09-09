@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<link rel="stylesheet" href="/style.css">
+
+<div id="maze_container"><!-- --></div>
+
+<script src="/maze.js"></script>
+<script>
+
+    let Maze = new MazeBuilder(16, 12);
+    Maze.placeKey();
+    Maze.placeHero();
+    Maze.display("maze_container");
+
+    document.addEventListener("keydown", (e) => {
+        let move;
+        switch(e.key) {
+            case "ArrowUp": move = [-1, 0]; break;
+            case "ArrowRight": move = [0, 1]; break;
+            case "ArrowDown": move = [1, 0]; break;
+            case "ArrowLeft": move = [0, -1]; break;
+            default: return;
+        }
+        Maze.moveHero(...move);
+    });
+
+
+
+</script>
+
+</body>
+</html>
