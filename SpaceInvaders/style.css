@@ -1,0 +1,39 @@
+body {
+    text-align: center;
+    background: black;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+#game {
+    position: relative;
+    margin: 20px auto;
+    width: 400px;
+    height: 500px;
+    background: #111;
+    border: 2px solid white;
+    overflow: hidden;
+}
+
+#player {
+    position: absolute;
+    bottom: 10px;
+    left: 180px;
+    width: 40px;
+    height: 20px;
+    background: lime;
+}
+
+.enemy {
+    position: absolute;
+    width: 30px;
+    height: 20px;
+    background: red;
+}
+
+.bullet {
+    position: absolute;
+    width: 5px;
+    height: 10px;
+    background: yellow;
+}
